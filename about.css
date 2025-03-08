@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  form {
+    background-color: white;
+    width: 500px;
+    padding: 40px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, #4a90e2, #63b3ed);
+  }
+  
+  h6 {
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0 8px 0;
+    font-weight: 600;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 5px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  .location {
+    margin-bottom: 25px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #4a90e2;
+  }
+  
+  .location p {
+    line-height: 1.6;
+    color: #444;
+    white-space: pre-line;
+    font-size: 16px;
+  }
+  
+  .icon {
+    padding: 20px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .icon a {
+    text-decoration: none;
+    color: #444;
+    text-align: center;
+    transition: all 0.3s ease;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 8px;
+    width: 100px;
+  }
+  
+  .icon a:hover {
+    transform: translateY(-5px);
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fa-brands.fa-linkedin.fa-2x {
+    color: #0077b5;
+  }
+  
+  .fa-brands.fa-facebook.fa-2x {
+    color: #1877f2;
+  }
+  
+  .fa-brands.fa-square-x-twitter.fa-2x {
+    color: #000;
+  }
+  
+  .fa-brands.fa-instagram.fa-2x {
+    color: #e1306c;
+  }
+  
+  .icon i {
+    margin-top: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .icon a:hover i {
+    transform: scale(1.2);
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 600px) {
+    form {
+      width: 90%;
+      padding: 30px 20px;
+    }
+    
+    .icon {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .icon a {
+      margin: 10px 0;
+      width: 80%;
+    }
+  }
+
+  .inspired p
+  {
+     font-size: 2em;
+  }
+
+
+

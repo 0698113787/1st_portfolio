@@ -1,0 +1,143 @@
+form[action="testimonials.php"] 
+{
+  max-width: 1200px;
+  margin: 50px auto;
+  display: block; /* Changed from flex to block for column layout */
+  padding: 20px;
+}
+
+.gallery
+{
+  width: 100%;
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px; /* Space between gallery items */
+  display: flex; /* Added to create horizontal layout within each gallery */
+  flex-direction: column; /* Start with column layout for mobile */
+}
+
+.gallery:hover
+{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery h4 
+{
+  background: linear-gradient(135deg, #281d33 0%, #2575fc 100%);
+  color: white;
+  padding: 15px;
+  margin: 0;
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.gallery img 
+{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 3px solid #f0f0f0;
+}
+
+.para
+{
+  padding: 20px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.para p
+{
+  margin: 0px;
+  color: hsl(0, 1%, 31%);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
+}
+
+@keyframes fadeIn 
+{
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design - tablet and desktop */
+@media (min-width: 768px)
+ {
+  .gallery {
+    flex-direction: row; /* Change to row layout for larger screens */
+    align-items: stretch;
+    height: 300px; /* Fixed height for consistent row heights */
+  }
+  
+  .gallery h4 
+  {
+    position: absolute;
+    z-index: 1;
+    background: linear-gradient(90deg, rgba(40,29,51,0.8) 0%, rgba(37,117,252,0.8) 100%);
+    width: auto;
+    padding: 10px 20px;
+    border-radius: 0 0 10px 0;
+  }
+  
+  .gallery img
+  {
+    width: 40%;
+    height: 100%;
+    border-bottom: none;
+    border-right: 3px solid #f0f0f0;
+  }
+  
+  .para 
+  {
+    width: 60%;
+    float: right;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  
+  .para p
+  {
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .gallery img {
+    width: 30%;
+  }
+  
+  .para {
+    width: 70%;
+  }
+}
+body
+{
+  margin : 0px;
+}
+
+/* Add this to body but avoid affecting header */
+body + form {
+  background-color: #60c3fc;
+  font-family: 'Arial', sans-serif;
+}
